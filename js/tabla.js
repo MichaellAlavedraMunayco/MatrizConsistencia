@@ -1,6 +1,7 @@
 'strict mode'
 
 $("#Titulo").html(convertirTextoAHTML(titulo.texto));
+$("#ContadorTitulo").html(`( ${obtenerNumeroPalabras($("#Titulo").text())} palabras )`);
 $("#ProblemáticaGeneral").html(convertirTextoAHTML(problematica.general));
 
 
@@ -16,3 +17,7 @@ function convertirTextoAHTML(arrayText) {
     });
     return htmlTransformado;
 };
+
+function obtenerNumeroPalabras(text) {
+    return text.split(" ").length;
+}
