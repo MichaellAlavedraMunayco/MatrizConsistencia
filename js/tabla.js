@@ -2,7 +2,12 @@
 
 $("#Titulo").html(convertirTextoAHTML(titulo.texto));
 $("#ContadorTitulo").html(`( ${obtenerNumeroPalabras($("#Titulo").text())} palabras )`);
-$("#ProblemáticaGeneral").html(convertirTextoAHTML(problematica.general));
+$("#ProblemaGeneral").html(convertirTextoAHTML(problema.general));
+$("#ObjetivoGeneral").html(convertirTextoAHTML(objetivo.general));
+$("#HipotesisGeneral").html(convertirTextoAHTML(hipotesis.general));
+$("#VariableDependiente").html(`Dependiente<hr>${convertirTextoAHTML([parametro.variable.dependiente])}`);
+$("#ObjetivoEspecifico1").html(convertirTextoAHTML(objetivo.especifico[0]));
+$("#VariableIndependiente").html(`Independiente<hr>${convertirTextoAHTML([parametro.variable.independiente])}`);
 
 
 function convertirTextoAHTML(arrayText) {

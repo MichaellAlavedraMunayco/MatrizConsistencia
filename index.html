@@ -7,11 +7,40 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
-    <title>Matriz de consistencia online!</title>
+    <title>Matriz de Consistencia Online</title>
     <style>
         html,
         body {
             font-family: 'Nunito', sans-serif;
+        }
+
+        .verticalText {
+            width: 30px;
+            text-align: center;
+            white-space: nowrap;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .verticalText:before {
+            content: '';
+            padding-top: 600%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        th.rotate {
+            border-top: none;
+            border-bottom: none;
+            border-left: 1px solid #dee2e6;
+            border-right: 2px solid #dee2e6;
+            pointer-events: none;
+        }
+
+        .my-table-hover tbody tr td:hover {
+            color: #212529;
+            background-color: rgba(0, 0, 0, .075);
         }
     </style>
 </head>
@@ -20,27 +49,36 @@
     <div class="container-fluid my-5">
         <h5 id="Titulo" class="text-center" style="color: #afafaf"></h5>
         <h6 id="ContadorTitulo" class="text-center" style="color: #666"></h6>
-        <table class="table table-sm table-hover">
+        <table class="table table-sm my-table-hover">
             <thead>
                 <tr>
-                    <th>Ámbito</th>
-                    <th>Problemáticas</th>
-                    <th>Objetivos</th>
-                    <th>Hipótesis</th>
+                    <th style="border: none;">
+                    </th>
+                    <th class="text-center">Problema</th>
+                    <th class="text-center">Objetivos</th>
+                    <th class="text-center">Hipótesis</th>
+                    <th class="text-center">Variables</th>
+                    <th class="text-center">Indicadores</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>General</th>
-                    <td id="ProblemáticaGeneral"></td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th class="rotate">
+                        <div class="verticalText">General</div>
+                    </th>
+                    <td id="ProblemaGeneral"></td>
+                    <td id="ObjetivoGeneral"></td>
+                    <td id="HipotesisGeneral"></td>
+                    <td id="VariableDependiente"></td>
                 </tr>
                 <tr>
-                    <th>Específicos</th>
+                    <th class="rotate">
+                        <div class="verticalText">Específicos</div>
+                    </th>
                     <td>Mark</td>
-                    <td>Otto</td>
+                    <td id="ObjetivoEspecifico1"></td>
                     <td>@mdo</td>
+                    <td id="VariableIndependiente"></td>
                 </tr>
             </tbody>
         </table>
