@@ -2,7 +2,7 @@
 
 const matriz = {
     titulo: {
-        texto: [parametro.variable.independiente, " para ", parametro.variable.dependiente, " a las ", parametro.poblacion, " en el ", parametro.periodo]
+        texto: [parametro.variable.independiente, " para ", parametro.variable.dependiente, " de las ", parametro.poblacion, " en el ", parametro.periodo]
     },
     problema: {
         general: ["¿De qué manera se puede ", parametro.variable.dependiente, " de las ", parametro.poblacion, " en el ", parametro.periodo, " con el uso de las Tecnologías de Información?"],

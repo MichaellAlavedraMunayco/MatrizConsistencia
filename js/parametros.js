@@ -72,7 +72,7 @@ const parametro = {
     },
     poblacion: {
         id: "poblacion",
-        texto: "Organizaciones usuarias del Sistema Web Eficientis",
+        texto: "Organizaciones usuarias del Sistema de Información Eficientis",
         color: "#f9bd22"
     },
     periodo: {
