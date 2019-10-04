@@ -32,7 +32,6 @@
 
         th.rotate {
             border-top: none;
-            border-bottom: none;
             border-left: 1px solid #dee2e6;
             border-right: 2px solid #dee2e6;
             pointer-events: none;
@@ -46,43 +45,7 @@
 </head>
 
 <body>
-    <div class="container-fluid my-5">
-        <h5 id="Titulo" class="text-center" style="color: #afafaf"></h5>
-        <h6 id="ContadorTitulo" class="text-center" style="color: #666"></h6>
-        <table class="table table-sm my-table-hover">
-            <thead>
-                <tr>
-                    <th style="border: none;">
-                    </th>
-                    <th class="text-center">Problema</th>
-                    <th class="text-center">Objetivos</th>
-                    <th class="text-center">Hipótesis</th>
-                    <th class="text-center">Variables</th>
-                    <th class="text-center">Indicadores</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="rotate">
-                        <div class="verticalText">General</div>
-                    </th>
-                    <td id="ProblemaGeneral"></td>
-                    <td id="ObjetivoGeneral"></td>
-                    <td id="HipotesisGeneral"></td>
-                    <td id="VariableDependiente"></td>
-                </tr>
-                <tr>
-                    <th class="rotate">
-                        <div class="verticalText">Específicos</div>
-                    </th>
-                    <td>Mark</td>
-                    <td id="ObjetivoEspecifico1"></td>
-                    <td>@mdo</td>
-                    <td id="VariableIndependiente"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div id="matrizConsistencia" class="container-fluid my-5"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

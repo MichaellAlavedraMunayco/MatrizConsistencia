@@ -27,15 +27,23 @@
 
 const parametro = {
     variable: {
-        dependiente: {
+        independiente: {
+            id: "variableIndependiente",
             texto: "Modelos de Business Analytics aplicados a Balanced Scorecards",
             color: "#4285f4",
             indicador: [
-                "Calidad de los Modelos Explicativos",
-                "Calidad de los Modelos Optimizativos"
+                {
+                    texto: "Calidad de los Modelos Explicativos",
+                    color: "#4285f4"
+                },
+                {
+                    texto: "Calidad de los Modelos Optimizativos",
+                    color: "#4285f4"
+                }
             ]
         },
-        independiente: {
+        dependiente: {
+            id: "variableDependiente",
             texto: "Facilitar la toma de decisiones en la Ejecución del Plan Estratégico",
             color: "#36ca5d",
             indicador: [
@@ -63,10 +71,12 @@ const parametro = {
         }
     },
     poblacion: {
+        id: "poblacion",
         texto: "Organizaciones usuarias del Sistema Web Eficientis",
         color: "#f9bd22"
     },
     periodo: {
+        id: "periodo",
         texto: "Año 2020",
         color: "#f14c3e"
     }
