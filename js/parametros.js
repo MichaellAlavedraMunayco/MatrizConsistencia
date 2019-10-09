@@ -29,15 +29,15 @@ const parametro = {
     variable: {
         independiente: {
             id: "variableIndependiente",
-            texto: "Modelos de Business Analytics aplicados a Balanced Scorecards",
+            texto: "Modelos Predictivos y Prescriptivos aplicados a Balanced Scorecards",
             color: "#4285f4",
             indicador: [
                 {
-                    texto: "Calidad de los Modelos Explicativos",
+                    texto: "Calidad de los Modelos Predictivos",
                     color: "#4285f4"
                 },
                 {
-                    texto: "Calidad de los Modelos Optimizativos",
+                    texto: "Calidad de los Modelos Prescriptivos",
                     color: "#4285f4"
                 }
             ]
@@ -72,7 +72,7 @@ const parametro = {
     },
     poblacion: {
         id: "poblacion",
-        texto: "Organizaciones usuarias del Sistema de Información Eficientis",
+        texto: "Organizaciones usuarias del Sistema de Información Gerencial Eficientis",
         color: "#f9bd22"
     },
     periodo: {

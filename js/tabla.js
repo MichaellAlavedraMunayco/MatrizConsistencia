@@ -5,9 +5,13 @@ $(function () {
 
     $('body').on('focus', '[contenteditable]', function () {
         // objeto seleccionado
+        console.log($(this));
     }).on('paste input', '[contenteditable]', function () {
         // objeto en edicion
-        parametro.variable.dependiente.texto = $(this).text();
+        // parametro.variable.dependiente.texto = $(this).text();
+        console.log($(this).find("#" + parametro.variable.independiente.id).text());
+        console.log($(this).find("#" + parametro.variable.dependiente.id).text());
+
     }).focusout(function () {
         $("#matrizConsistencia").html(construirTabla(parametro, matriz));
     });
@@ -19,7 +23,7 @@ function construirTabla(parametro, matriz) {
     var numIndicadoresDependientes = parametro.variable.dependiente.indicador.length;
 
     tableHTML +=
-        `<h5 class="text-center" style="color: #afafaf">${convertirTextoAHTML(matriz.titulo.texto)}</h5>
+        `<h5 class="text-center" style="color: #afafaf" contenteditable="true" spellcheck="true">${convertirTextoAHTML(matriz.titulo.texto)}</h5>
         <h6 class="text-center" style="color: #666">( ${obtenerNumeroPalabras(convertirTextoAString(matriz.titulo.texto))} palabras )</h6>
         <table class="table table-sm my-table-hover table-bordered">
             <thead>
@@ -74,7 +78,7 @@ function convertirTextoAHTML(arrayText) {
     var htmlTransformado = new String();
     arrayText.forEach(textOrObject => {
         if (typeof textOrObject === "object") {
-            htmlTransformado += `<div id="${textOrObject.id}" style="color: ${textOrObject.color}; display: inline; font-weight: bold;" contenteditable="true" spellcheck="true">${textOrObject.texto}</div>`;
+            htmlTransformado += `<div id="${textOrObject.id}" style="color: ${textOrObject.color}; display: inline; font-weight: bold;">${textOrObject.texto}</div>`;
         }
         if (typeof textOrObject === "string") {
             htmlTransformado += textOrObject;
@@ -98,4 +102,41 @@ function convertirTextoAString(arrayText) {
 
 function obtenerNumeroPalabras(text) {
     return text.split(" ").length;
+}
+
+/**
+ * Syntax
+ * Variable Independicnte
+ * {{vi=texto}}
+ * Variable Dependicnte
+ * {{vd=texto}}
+ * Población
+ * {{po=texto}}
+ * Periodo
+ * {{pe=texto}}
+ * @param {Array} array 
+ */
+function codificar(array) {
+
+}
+
+/**
+ * Example
+ * {vi=Variable Independiente} ayuda a {vd=Variable Dependiente} de los {po=Poblacion} en el {pe=Periodo}
+ * @param {String} text 
+ */
+function decodificar(text) {
+    var i = 0;
+    var textToArray = [];
+    var temporalString = new String();
+    while (i++ == text.length - 1) {
+        if (text[i] == '{') {
+            temporalString += text[i];
+        }
+        if (text[i] == '}') {
+            temporalString += text[i];
+            textToArray.push(temporalString);
+            temporalString = '';
+        }
+    }
 }
