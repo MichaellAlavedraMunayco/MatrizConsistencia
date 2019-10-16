@@ -1,35 +1,10 @@
 'strict mode'
 
-// Tesis 1
-
-// const parametro = {
-//     variable: {
-//         dependiente: {
-//             texto: "Sistema Experto basado en Dispositivos Móviles",
-//             color: "#4285f4"
-//         },
-//         independiente: {
-//             texto: "Nivel de comprensión y capacidad solucionativa de situaciones problemáticas académicas",
-//             color: "#36ca5d"
-//         }
-//     },
-//     poblacion: {
-//         texto: "Estudiantes peruanos de nivel primario, secundario, universitario",
-//         color: "#f9bd22"
-//     },
-//     periodo: {
-//         texto: "Año 2020",
-//         color: "#f14c3e"
-//     }
-// };
-
-// Tesis 2
-
 const parametro = {
     variable: {
         independiente: {
             id: "variableIndependiente",
-            texto: "Modelos Predictivos y Prescriptivos aplicados a Balanced Scorecards",
+            texto: "Implementación de Modelos Proactivos de Analítica de Negocios",
             color: "#4285f4",
             indicador: [
                 {
@@ -44,7 +19,7 @@ const parametro = {
         },
         dependiente: {
             id: "variableDependiente",
-            texto: "Facilitar la toma de decisiones en la Ejecución del Plan Estratégico",
+            texto: "Optimización de reportes del Sistema de Información Gerencial 'Eficientis'",
             color: "#36ca5d",
             indicador: [
                 {
@@ -72,7 +47,7 @@ const parametro = {
     },
     poblacion: {
         id: "poblacion",
-        texto: "Organizaciones usuarias del Sistema de Información Gerencial Eficientis",
+        texto: "Empresa 'ABC' S.A.C.",
         color: "#f9bd22"
     },
     periodo: {
