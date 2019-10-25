@@ -25,7 +25,7 @@ const matriz = {
         ]
     },
     hipotesis: {
-        general: ["Con la ", parametro.variable.independiente, " se logra una ", parametro.variable.dependiente, " de las ", parametro.poblacion, " en el ", parametro.periodo],
+        general: ["Con la ", parametro.variable.independiente, " se logra una ", parametro.variable.dependiente, " de la ", parametro.poblacion, " en el ", parametro.periodo],
         especifico: [
             ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[0], " de las ", parametro.poblacion, " en el ", parametro.periodo],
             ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[1], " de las ", parametro.poblacion, " en el ", parametro.periodo],

@@ -19,7 +19,7 @@ const parametro = {
         },
         dependiente: {
             id: "variableDependiente",
-            texto: "Optimización de reportes del Sistema de Información Gerencial 'Eficientis'",
+            texto: "Mejora del Sistema de Información Gerencial 'Eficientis'",
             color: "#36ca5d",
             indicador: [
                 {
@@ -47,12 +47,12 @@ const parametro = {
     },
     poblacion: {
         id: "poblacion",
-        texto: "Empresa 'ABC' S.A.C.",
+        texto: "Compañía 'Instrategy Management Consulting'",
         color: "#f9bd22"
     },
     periodo: {
         id: "periodo",
-        texto: "Año 2020",
+        texto: "Período 2019-2020",
         color: "#f14c3e"
     }
 };
