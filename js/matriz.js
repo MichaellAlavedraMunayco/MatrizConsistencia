@@ -1,37 +1,36 @@
 'strict mode'
+const p = parametro;
+const vi = p.variable.independiente;
+const vd = p.variable.dependiente;
+const lg = p.limitacion.geografica;
+const lt = p.limitacion.temporal;
 
 const matriz = {
     titulo: {
-        texto: [parametro.variable.independiente, " para la ", parametro.variable.dependiente, " de la ", parametro.poblacion, " en el ", parametro.periodo]
+        texto: ["Diseño de un ", vi, " para mejorar el ", vd, " de la ", lg, " en el ", lt]
     },
     problema: {
-        general: ["¿De qué manera se puede lograr la ", parametro.variable.dependiente, " de la ", parametro.poblacion, " en el ", parametro.periodo, " con el uso de las Tecnologías de Información?"],
+        general: ["¿Cómo mejorar el ", vd, " de la ", lg, " en el ", lt, " con ayuda de las Tecnologías de Información?"],
         especifico: [
-            ["¿De qué manera se puede mejorar la ", parametro.variable.dependiente.indicador[0], " de las ", parametro.poblacion, " en el ", parametro.periodo, "?"],
-            ["¿De qué manera se puede mejorar la ", parametro.variable.dependiente.indicador[1], " de las ", parametro.poblacion, " en el ", parametro.periodo, "?"],
-            ["¿De qué manera se puede mejorar la ", parametro.variable.dependiente.indicador[2], " de las ", parametro.poblacion, " en el ", parametro.periodo, "?"],
-            ["¿De qué manera se puede mejorar la ", parametro.variable.dependiente.indicador[3], " de las ", parametro.poblacion, " en el ", parametro.periodo, "?"],
-            ["¿De qué manera las ", parametro.poblacion, " pueden conseguir ", parametro.variable.dependiente.indicador[4], " en el ", parametro.periodo, "?"]
+            ["¿Cómo mejorar la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt, "?"],
+            ["¿Cómo mejorar la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt, "?"],
+            ["¿Cómo mejorar el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt, "?"]
         ]
     },
     objetivo: {
-        general: ["Lograr la ", parametro.variable.dependiente, " de la ", parametro.poblacion, " en el ", parametro.periodo, " con la ", parametro.variable.independiente],
+        general: ["Desarrollar un ", vi, " para mejorar el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["Mejorar la ", parametro.variable.dependiente.indicador[0], " de las ", parametro.poblacion, " en el ", parametro.periodo, " con ", parametro.variable.independiente],
-            ["Mejorar la ", parametro.variable.dependiente.indicador[1], " de las ", parametro.poblacion, " en el ", parametro.periodo, " con ", parametro.variable.independiente],
-            ["Mejorar la ", parametro.variable.dependiente.indicador[2], " de las ", parametro.poblacion, " en el ", parametro.periodo, " con ", parametro.variable.independiente],
-            ["Mejorar la ", parametro.variable.dependiente.indicador[3], " de las ", parametro.poblacion, " en el ", parametro.periodo, " con ", parametro.variable.independiente],
-            ["Ayudar a las ", parametro.poblacion, " a conseguir ", parametro.variable.dependiente.indicador[4], " en el ", parametro.periodo, " con ", parametro.variable.independiente]
+            ["Mejorar la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt],
+            ["Mejorar la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt],
+            ["Mejorar el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt]
         ]
     },
     hipotesis: {
-        general: ["Con la ", parametro.variable.independiente, " se logra una ", parametro.variable.dependiente, " de la ", parametro.poblacion, " en el ", parametro.periodo],
+        general: ["El ", vi, " impactará significativamente en el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[0], " de las ", parametro.poblacion, " en el ", parametro.periodo],
-            ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[1], " de las ", parametro.poblacion, " en el ", parametro.periodo],
-            ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[2], " de las ", parametro.poblacion, " en el ", parametro.periodo],
-            ["Con ", parametro.variable.independiente, " se logra mejorar la ", parametro.variable.dependiente.indicador[3], " de las ", parametro.poblacion, " en el ", parametro.periodo],
-            ["Con ", parametro.variable.independiente, " las ", parametro.poblacion, " consiguen ", parametro.variable.dependiente.indicador[4], " en el ", parametro.periodo]
+            ["El ", vi, " mejorará la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt],
+            ["El ", vi, " mejorará la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt],
+            ["El ", vi, " mejorará el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt]
         ]
 
     }

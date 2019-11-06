@@ -4,55 +4,53 @@ const parametro = {
     variable: {
         independiente: {
             id: "variableIndependiente",
-            texto: "Implementación de Modelos Proactivos de Analítica de Negocios",
-            color: "#4285f4",
+            texto: "Modelo Proactivo de Analítica de Negocios",
+            color: color.variableIndependiente,
             indicador: [
                 {
-                    texto: "Calidad de los Modelos Predictivos",
-                    color: "#4285f4"
+                    texto: "Eficiencia en la Captura de Datos",
+                    color: color.variableIndependiente
                 },
                 {
-                    texto: "Calidad de los Modelos Prescriptivos",
-                    color: "#4285f4"
+                    texto: "Eficacia en el Procesamiento de Datos",
+                    color: color.variableIndependiente
+                },
+                {
+                    texto: "Efectividad en la Entrega de Información",
+                    color: color.variableIndependiente
                 }
             ]
         },
         dependiente: {
             id: "variableDependiente",
-            texto: "Mejora del Sistema de Información Gerencial 'Eficientis'",
-            color: "#36ca5d",
+            texto: "Sistema de Información 'Eficientis Balanced Scorecard'",
+            color: color.variableDependiente,
             indicador: [
                 {
-                    texto: "Calidad de la gestión del aprendizaje y crecimiento del personal",
-                    color: "#36ca5d"
+                    texto: "Dinamicidad de la Visualización de Datos",
+                    color: color.variableDependiente
                 },
                 {
-                    texto: "Calidad de la gestión de procesos internos",
-                    color: "#36ca5d"
+                    texto: "Capacidad Funcional Analítica",
+                    color: color.variableDependiente
                 },
                 {
-                    texto: "Calidad de la gestión de los clientes",
-                    color: "#36ca5d"
-                },
-                {
-                    texto: "Calidad de la gestión financiera",
-                    color: "#36ca5d"
-                },
-                {
-                    texto: "Metas organizacionales superadas",
-                    color: "#36ca5d"
+                    texto: "Grado de Inteligencia de Informes",
+                    color: color.variableDependiente
                 }
             ]
         }
     },
-    poblacion: {
-        id: "poblacion",
-        texto: "Compañía 'Instrategy Management Consulting'",
-        color: "#f9bd22"
-    },
-    periodo: {
-        id: "periodo",
-        texto: "Período 2019-2020",
-        color: "#f14c3e"
+    limitacion: {
+        geografica: {
+            id: "limitacionGeografica",
+            texto: "Compañía 'Instrategy Management Consulting'",
+            color: color.limitacionGeografica
+        },
+        temporal: {
+            id: "limitacionTemporal",
+            texto: "Período 2019-2020",
+            color: color.limitacionTemporal
+        }
     }
 };

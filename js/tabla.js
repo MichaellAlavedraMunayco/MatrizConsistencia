@@ -8,9 +8,9 @@ $(function () {
         console.log($(this));
     }).on('paste input', '[contenteditable]', function () {
         // objeto en edicion
-        // parametro.variable.dependiente.texto = $(this).text();
-        console.log($(this).find("#" + parametro.variable.independiente.id).text());
-        console.log($(this).find("#" + parametro.variable.dependiente.id).text());
+        // vd.texto = $(this).text();
+        console.log($(this).find("#" + vi.id).text());
+        console.log($(this).find("#" + vd.id).text());
 
     }).focusout(function () {
         $("#matrizConsistencia").html(construirTabla(parametro, matriz));
@@ -19,12 +19,12 @@ $(function () {
 
 function construirTabla(parametro, matriz) {
     var tableHTML = new String();
-    var numIndicadoresIndependientes = parametro.variable.independiente.indicador.length;
-    var numIndicadoresDependientes = parametro.variable.dependiente.indicador.length;
+    var numIndicadoresIndependientes = vi.indicador.length;
+    var numIndicadoresDependientes = vd.indicador.length;
 
     tableHTML +=
-        `<h5 class="text-center" style="color: #afafaf" contenteditable="true" spellcheck="true">${convertirTextoAHTML(matriz.titulo.texto)}</h5>
-        <h6 class="text-center" style="color: #666">( ${obtenerNumeroPalabras(convertirTextoAString(matriz.titulo.texto))} palabras )</h6>
+        `<h5 class="text-center" style="color: #000" contenteditable="true" spellcheck="true">${convertirTextoAHTML(matriz.titulo.texto)}
+        <span class="text-center small" style="color: #666"> (${obtenerNumeroPalabras(convertirTextoAString(matriz.titulo.texto))})</span></h5>
         <table class="table table-sm my-table-hover table-bordered">
             <thead>
                 <tr>
@@ -39,35 +39,36 @@ function construirTabla(parametro, matriz) {
             <tbody>
                 <tr>
                     <th rowspan="${numIndicadoresIndependientes}" class="rotate"><div class="verticalText">General</div></th>
-                    <td rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.problema.general)}</td>
-                    <td rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.objetivo.general)}</td>
-                    <td rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.hipotesis.general)}</td>
-                    <td rowspan="${numIndicadoresIndependientes}">Independiente<hr>${convertirTextoAHTML([parametro.variable.independiente])}</td>`;
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.problema.general)}</td>
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.objetivo.general)}</td>
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.hipotesis.general)}</td>
+                    <td rowspan="${numIndicadoresIndependientes}">Independiente<hr>${convertirTextoAHTML([vi])}</td>`;
     for (let index = 0; index < numIndicadoresIndependientes; index++) {
         if (index > 0) {
             tableHTML += `<tr>`;
         }
-        tableHTML += `<td>${convertirTextoAHTML([parametro.variable.independiente.indicador[index]])}</td>`;
+        tableHTML += `<td class="align-middle">${convertirTextoAHTML([vi.indicador[index]])}</td>`;
     }
     tableHTML += `</tr>
+    <tr style="height: 10px"></tr>
     <tr>
-        <th rowspan="${numIndicadoresDependientes}" class="rotate"><div class="verticalText">Específicos</div></th>`;
+        <th rowspan="${numIndicadoresDependientes}" class="rotate divider"><div class="verticalText">Específicos</div></th>`;
     for (let index = 0; index < numIndicadoresDependientes; index++) {
-        const indicador = [parametro.variable.dependiente.indicador[index]];
+        const indicador = [vd.indicador[index]];
         const problemaEspecifico = matriz.problema.especifico[index];
         const objetivoEspecifico = matriz.objetivo.especifico[index];
         const hipotesisEspecifico = matriz.hipotesis.especifico[index];
         if (index > 0) {
             tableHTML += `<tr>`;
         }
-        tableHTML += `<td>${convertirTextoAHTML(problemaEspecifico)}</td>
-                    <td>${convertirTextoAHTML(objetivoEspecifico)}</td>
-                    <td>${convertirTextoAHTML(hipotesisEspecifico)}</td>`;
+        tableHTML += `<td class="align-middle">${convertirTextoAHTML(problemaEspecifico)}</td>
+                    <td class="align-middle">${convertirTextoAHTML(objetivoEspecifico)}</td>
+                    <td class="align-middle">${convertirTextoAHTML(hipotesisEspecifico)}</td>`;
         if (index == 0) {
-            tableHTML += `<td rowspan="${numIndicadoresDependientes}">Dependiente<hr>${convertirTextoAHTML([parametro.variable.dependiente])}</td>`;
+            tableHTML += `<td rowspan="${numIndicadoresDependientes}">Dependiente<hr>${convertirTextoAHTML([vd])}</td>`;
         }
         tableHTML += `
-            <td>${convertirTextoAHTML(indicador)}</td>
+            <td class="align-middle">${convertirTextoAHTML(indicador)}</td>
         </tr>`;
     }
     tableHTML += `</tbody></table>`;
