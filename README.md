@@ -2,4 +2,4 @@
 
 ## Previsualización
 
-! [Matriz de Consistencia] (mc.png) 
+![Matriz de Consistencia](mc.png) 
