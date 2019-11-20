@@ -1,5 +1,3 @@
-'strict mode'
-
 const parametro = {
     variable: {
         independiente: {
@@ -9,15 +7,30 @@ const parametro = {
             indicador: [
                 {
                     texto: "Eficiencia en la Captura de Datos",
-                    color: color.variableIndependiente
+                    color: color.variableIndependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método Delphi",
+                    instrumento: "Cuestionario"
                 },
                 {
                     texto: "Eficacia en el Procesamiento de Datos",
-                    color: color.variableIndependiente
+                    color: color.variableIndependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método Delphi",
+                    instrumento: "Cuestionario"
                 },
                 {
                     texto: "Efectividad en la Entrega de Información",
-                    color: color.variableIndependiente
+                    color: color.variableIndependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método Delphi",
+                    instrumento: "Cuestionario"
                 }
             ]
         },
@@ -28,15 +41,30 @@ const parametro = {
             indicador: [
                 {
                     texto: "Dinamicidad de la Visualización de Datos",
-                    color: color.variableDependiente
+                    color: color.variableDependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método TOPSIS",
+                    instrumento: "Cuestionario"
                 },
                 {
                     texto: "Capacidad Funcional Analítica",
-                    color: color.variableDependiente
+                    color: color.variableDependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método TOPSIS",
+                    instrumento: "Cuestionario"
                 },
                 {
                     texto: "Grado de Inteligencia de Informes",
-                    color: color.variableDependiente
+                    color: color.variableDependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tipo: "Cuantitativa",
+                    tecnica: "Método TOPSIS",
+                    instrumento: "Cuestionario"
                 }
             ]
         }

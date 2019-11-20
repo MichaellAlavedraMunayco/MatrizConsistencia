@@ -1,5 +1,3 @@
-'strict mode'
-
 const color = {
     variableIndependiente: '#4285f4',
     variableDependiente: '#36ca5d',
