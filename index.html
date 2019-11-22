@@ -31,6 +31,18 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/67cbf21578.js" crossorigin="anonymous"></script>
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <p style="display: none;">
+        $$n = {Z^2 \cdot p \cdot q \cdot N \over (N-1) \cdot E^2+Z^2 \cdot p \cdot q}.$$
+    </p>
     <script src="js/color.js"></script>
     <script src="js/parametros.js"></script>
     <script src="js/matriz.js"></script>

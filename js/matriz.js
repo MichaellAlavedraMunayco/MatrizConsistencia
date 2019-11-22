@@ -17,7 +17,7 @@ const matriz = {
         ]
     },
     objetivo: {
-        general: ["Implementar un ", vi, " para mejorar el ", vd, " de la ", lg, " en el ", lt],
+        general: ["Comprobar que el ", vi, " mejora el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
             ["Mejorar la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt],
             ["Mejorar la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt],
