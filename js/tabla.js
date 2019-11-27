@@ -27,16 +27,15 @@ function construirTabla(parametro, matriz, reglamento) {
             <thead>
                 <tr>
                     <th style="border: none;"></th>
-                    <th id="ProblemaTooltip" class="text-center" style="border-left: none; border-right: none; width: 15%">Problema</th>
-                    <th id="ObjetivoTooltip" class="text-center" style="border-left: none; border-right: none; width: 15%">Objetivos</th>
-                    <th id="HipotesisTooltip" class="text-center" style="border-left: none; border-right: none; width: 15%">Hipótesis</th>
+                    <th id="ProblemaTooltip" class="text-center" style="border-left: none; border-right: none; width: 17%">Problema</th>
+                    <th id="ObjetivoTooltip" class="text-center" style="border-left: none; border-right: none; width: 17%">Objetivos</th>
+                    <th id="HipotesisTooltip" class="text-center" style="border-left: none; border-right: none; width: 17%">Hipótesis</th>
                     <th id="VariablesTooltip" class="text-center" style="border-left: none; border-right: none; width: 5%">Variables</th>
                     <th class="text-center" style="border-left: none; border-right: none; width: 10%">Indicadores</th>
                     <th class="text-center" style="border-left: none; border-right: none">Valores</th>
                     <th class="text-center" style="border-left: none; border-right: none">Unidad</th>
-                    <th class="text-center" style="border-left: none; border-right: none">Tipo</th>
                     <th class="text-center" style="border-left: none; border-right: none">Técnica</th>
-                    <th class="text-center" style="border-left: none; border-right: none">Instrumenro</th>
+                    <th class="text-center" style="border-left: none; border-right: none">Instrumento</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,7 +53,6 @@ function construirTabla(parametro, matriz, reglamento) {
         tableHTML += `<td class="align-middle">${convertirTextoAHTML([indicador])}</td>`;
         tableHTML += `<td class="align-middle">${indicador.valor}</td>`;
         tableHTML += `<td class="align-middle">${indicador.unidad}</td>`;
-        tableHTML += `<td class="align-middle">${indicador.tipo}</td>`;
         tableHTML += `<td class="align-middle">${indicador.tecnica}</td>`;
         tableHTML += `<td class="align-middle">${indicador.instrumento}</td>`;
     }
@@ -80,7 +78,6 @@ function construirTabla(parametro, matriz, reglamento) {
             <td class="align-middle">${convertirTextoAHTML([indicador])}</td>
             <td class="align-middle">${indicador.valor}</td>
             <td class="align-middle">${indicador.unidad}</td>
-            <td class="align-middle">${indicador.tipo}</td>
             <td class="align-middle">${indicador.tecnica}</td>
             <td class="align-middle">${indicador.instrumento}</td>
         </tr>`;
@@ -109,14 +106,7 @@ function construirTabla(parametro, matriz, reglamento) {
                         Durante el ${convertirTextoAHTML([parametro.limitacion.temporal])}
                         <br><br><b>Muestra</b>
                         <hr style="margin:0">
-                        N = Población: 52<br>
-                        Z = Porcentaje de confianza (95%): 1,96<br>
-                        p = Variabilidad positiva: 0,6<br>
-                        q = Variabilidad negativa: 0,4<br>
-                        E = Porcentaje de error: 0,05<br>
-                        n = 46<br>
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28.522ex" height="5.778ex" role="img" focusable="false" viewBox="0 -1509.9 12606.9 2553.9" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.362ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-TEX-I-6E"></use></g><g data-mml-node="mo" transform="translate(877.8, 0)"><use xlink:href="#MJX-TEX-N-3D"></use></g><g data-mml-node="TeXAtom" transform="translate(1933.6, 0)"><g data-mml-node="mfrac"><g data-mml-node="mrow" transform="translate(2652.2, 676)"><g data-mml-node="msup"><g data-mml-node="mi"><use xlink:href="#MJX-TEX-I-5A"></use></g><g data-mml-node="mn" transform="translate(683, 363) scale(0.707)"><use xlink:href="#MJX-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(1308.8, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(1809, 0)"><use xlink:href="#MJX-TEX-I-70"></use></g><g data-mml-node="mo" transform="translate(2534.2, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(3034.4, 0)"><use xlink:href="#MJX-TEX-I-71"></use></g><g data-mml-node="mo" transform="translate(3702.7, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(4202.9, 0)"><use xlink:href="#MJX-TEX-I-4E"></use></g></g><g data-mml-node="mrow" transform="translate(220, -793.9)"><g data-mml-node="mo"><use xlink:href="#MJX-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(389, 0)"><use xlink:href="#MJX-TEX-I-4E"></use></g><g data-mml-node="mo" transform="translate(1499.2, 0)"><use xlink:href="#MJX-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(2499.4, 0)"><use xlink:href="#MJX-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(2999.4, 0)"><use xlink:href="#MJX-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(3610.7, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="msup" transform="translate(4110.9, 0)"><g data-mml-node="mi"><use xlink:href="#MJX-TEX-I-45"></use></g><g data-mml-node="mn" transform="translate(738, 363) scale(0.707)"><use xlink:href="#MJX-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(5474.7, 0)"><use xlink:href="#MJX-TEX-N-2B"></use></g><g data-mml-node="msup" transform="translate(6474.9, 0)"><g data-mml-node="mi"><use xlink:href="#MJX-TEX-I-5A"></use></g><g data-mml-node="mn" transform="translate(683, 363) scale(0.707)"><use xlink:href="#MJX-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(7783.7, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(8283.9, 0)"><use xlink:href="#MJX-TEX-I-70"></use></g><g data-mml-node="mo" transform="translate(9009.1, 0)"><use xlink:href="#MJX-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(9509.3, 0)"><use xlink:href="#MJX-TEX-I-71"></use></g></g><rect width="10155.3" height="60" x="120" y="220"></rect></g></g><g data-mml-node="mo" transform="translate(12328.9, 0)"><use xlink:href="#MJX-TEX-N-2E"></use></g></g></g></svg>
+                        Usuarios seleccionados del ${convertirTextoAHTML([vd])}
                     </td>
                     <td>
                         <b>Tipo de investigación según el objetivo</b>
@@ -133,11 +123,10 @@ function construirTabla(parametro, matriz, reglamento) {
 
                         <br><br><b>Tipo de investigación según el grado de manipulación de variables</b>
                         <hr style="margin:0">
-                        Cuasi-Experimental
-                        <br>CS <i class="fas fa-long-arrow-alt-right"></i> IV <i class="fas fa-long-arrow-alt-right"></i> FS
-                        <br>CS = Evaluación inicial del ${convertirTextoAHTML([vd])}
-                        <br>IV = Implementación del ${convertirTextoAHTML([vi])}
-                        <br>FS = Evaluación final del ${convertirTextoAHTML([vd])}
+                        No Experimental
+                        <div style="width: 100%; text-align: center">VI <i class="fas fa-exchange-alt"></i> EF</div>
+                        VI = Aplicación/Mejora del ${convertirTextoAHTML([vi])}
+                        <br>FS = Evaluación del ${convertirTextoAHTML([vd])}
 
                         <br><br><b>Tipo de investigación según el estudio de la realidad</b>
                         <hr style="margin:0">
@@ -148,20 +137,23 @@ function construirTabla(parametro, matriz, reglamento) {
                         Longitudinal
                     </td>
                     <td>
-                        1. Elaboración de cuestionarios
-                        <br>2. Aplicar cuestionarios a la muestra
-                        <br>3. Recopilar y procesar resultados
-                        <br>4. Desarrollar la solución propuesta
-                        <br>4.1. Prototipar
-                        <br>4.2. Analizar
-                        <br>4.3. Diseñar
-                        <br>4.4. Implementar
-                        <br>4.5. Testear
-                        <br>4.6. Desplegar
-                        <br>5. Solicitar testeo de la solución a la muestra
-                        <br>6. Aplicar cuestionarios a la muestra
-                        <br>7. Recopilar resultados totales
-                        <br>8. Validación de hipótesis
+                        1. Desarrollo del modelo
+                        <br>1.1. Recolección de datos
+                        <br>1.2. Modelado de datos estructurados
+                        <br>1.3. Transformación de datos
+                        <br>1.4. Preparación de datos
+                        <br>1.5. Exploración visual de datos
+                        <br>1.6. Desarrollo/Mejora del modelo
+                        <br>1.7. Aplicación del modelo
+                        <br>1.8. Testeo del modelo
+                        <br>1.9. Documentación de resultados
+                        <br>1.10. (SI resultado es NEGATIVO) Volver al punto 1
+                        <br>1.11. Despliegue del modelo
+                        <br>2. Validación del modelo
+                        <br>2.1. Testeo por usuarios finales
+                        <br>2.2. Aplicación de cuestionarios
+                        <br>2.3. Recopilar resultados
+                        <br>2.4. Validación de hipótesis
                     </td>
                 </tr>
             </tbody>

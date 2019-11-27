@@ -11,25 +11,22 @@ const matriz = {
     problema: {
         general: ["¿Cómo mejorar el ", vd, " de la ", lg, " en el ", lt, " con ayuda de las Tecnologías de Información?"],
         especifico: [
-            ["¿Cómo mejorar la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt, "?"],
-            ["¿Cómo mejorar la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt, "?"],
-            ["¿Cómo mejorar el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt, "?"]
+            ["¿Cómo mejorar el ", vd.indicador[0], " del ", vd, "?"],
+            ["¿Cómo optimizar la ", vd.indicador[1], " en el ", vd, "?"]
         ]
     },
     objetivo: {
-        general: ["Comprobar que el ", vi, " mejora el ", vd, " de la ", lg, " en el ", lt],
+        general: ["Validar que el ", vi, " mejora el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["Mejorar la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt],
-            ["Mejorar la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt],
-            ["Mejorar el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt]
+            ["Validar que el ", vi, " mejora el ", vd.indicador[0], " del ", vd],
+            ["Validar que el ", vi, " facilita la ", vd.indicador[1], " del ", vd]
         ]
     },
     hipotesis: {
         general: ["El ", vi, " impactará significativamente en el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["El ", vi, " mejorará la ", vd.indicador[0], " del ", vd, " de la ", lg, " en el ", lt],
-            ["El ", vi, " mejorará la ", vd.indicador[1], " del ", vd, " de la ", lg, " en el ", lt],
-            ["El ", vi, " mejorará el ", vd.indicador[2], " del ", vd, " de la ", lg, " en el ", lt]
+            ["El ", vi, " mejorará el ", vd.indicador[0], " del ", vd],
+            ["El ", vi, " facilitará la ", vd.indicador[1], " en el ", vd]
         ]
 
     }

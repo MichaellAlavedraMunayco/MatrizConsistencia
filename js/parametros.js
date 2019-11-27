@@ -6,31 +6,36 @@ const parametro = {
             color: color.variableIndependiente,
             indicador: [
                 {
-                    texto: "Eficiencia en la Captura de Datos",
+                    texto: "Exactitud",
                     color: color.variableIndependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método Delphi",
-                    instrumento: "Cuestionario"
+                    tecnica: "Cálculo matemático",
+                    instrumento: "Matriz de confusión"
                 },
                 {
-                    texto: "Eficacia en el Procesamiento de Datos",
+                    texto: "Sensibilidad",
                     color: color.variableIndependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método Delphi",
-                    instrumento: "Cuestionario"
+                    tecnica: "Cálculo matemático",
+                    instrumento: "Matriz de confusión"
                 },
                 {
-                    texto: "Efectividad en la Entrega de Información",
+                    texto: "Precisión",
                     color: color.variableIndependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método Delphi",
-                    instrumento: "Cuestionario"
+                    tecnica: "Cálculo matemático",
+                    instrumento: "Matriz de confusión"
+                },
+                {
+                    texto: "Puntuación F1",
+                    color: color.variableIndependiente,
+                    valor: "[0 - 100]",
+                    unidad: "%",
+                    tecnica: "Cálculo matemático",
+                    instrumento: "Matriz de confusión"
                 }
             ]
         },
@@ -40,30 +45,19 @@ const parametro = {
             color: color.variableDependiente,
             indicador: [
                 {
-                    texto: "Dinamicidad de la Visualización de Datos",
+                    texto: "Grado de Inteligencia",
                     color: color.variableDependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método TOPSIS",
+                    tecnica: "Encuesta",
                     instrumento: "Cuestionario"
                 },
                 {
-                    texto: "Capacidad Funcional Analítica",
+                    texto: "Toma de Decisiones",
                     color: color.variableDependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método TOPSIS",
-                    instrumento: "Cuestionario"
-                },
-                {
-                    texto: "Grado de Inteligencia de Informes",
-                    color: color.variableDependiente,
-                    valor: "[0 - 100]",
-                    unidad: "%",
-                    tipo: "Cuantitativa",
-                    tecnica: "Método TOPSIS",
+                    tecnica: "Encuesta",
                     instrumento: "Cuestionario"
                 }
             ]
