@@ -1,6 +1,6 @@
 const color = {
     variableIndependiente: '#4285f4',
     variableDependiente: '#36ca5d',
-    limitacionGeografica: '#666666',
+    limitacionGeografica: '#fd8c00',
     limitacionTemporal: '#f14c3e'
 }

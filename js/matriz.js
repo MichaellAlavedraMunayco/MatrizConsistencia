@@ -6,27 +6,24 @@ const lt = p.limitacion.temporal;
 
 const matriz = {
     titulo: {
-        texto: ["Implementación de un ", vi, " para mejorar el ", vd, " de la ", lg, " en el ", lt]
+        texto: ["Desarollo de un ", vi, " como soporte en el ", vd, " de la ", lg, " en el ", lt]
     },
     problema: {
-        general: ["¿Cómo mejorar el ", vd, " de la ", lg, " en el ", lt, " con ayuda de las Tecnologías de Información?"],
+        general: ["¿Cómo las Tecnologías de Información pueden mejorar el ", vd, " de la ", lg, " en el ", lt, "?"],
         especifico: [
-            ["¿Cómo mejorar el ", vd.indicador[0], " del ", vd, "?"],
-            ["¿Cómo optimizar la ", vd.indicador[1], " en el ", vd, "?"]
+            ["¿Cómo mejorar la ", vd.indicador[0], " en el ", vd, "?"],
         ]
     },
     objetivo: {
         general: ["Validar que el ", vi, " mejora el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["Validar que el ", vi, " mejora el ", vd.indicador[0], " del ", vd],
-            ["Validar que el ", vi, " facilita la ", vd.indicador[1], " del ", vd]
+            ["Validar que el ", vi, " mejora la ", vd.indicador[0], " en el ", vd],
         ]
     },
     hipotesis: {
-        general: ["El ", vi, " impactará significativamente en el ", vd, " de la ", lg, " en el ", lt],
+        general: ["El ", vi, " mejorará el ", vd, " de la ", lg, " en el ", lt],
         especifico: [
-            ["El ", vi, " mejorará el ", vd.indicador[0], " del ", vd],
-            ["El ", vi, " facilitará la ", vd.indicador[1], " en el ", vd]
+            ["El ", vi, " mejorará la ", vd.indicador[0], " en el ", vd],
         ]
 
     }

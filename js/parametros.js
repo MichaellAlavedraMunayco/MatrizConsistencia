@@ -28,32 +28,16 @@ const parametro = {
                     unidad: "%",
                     tecnica: "Cálculo matemático",
                     instrumento: "Matriz de confusión"
-                },
-                {
-                    texto: "Puntuación F1",
-                    color: color.variableIndependiente,
-                    valor: "[0 - 100]",
-                    unidad: "%",
-                    tecnica: "Cálculo matemático",
-                    instrumento: "Matriz de confusión"
                 }
             ]
         },
         dependiente: {
             id: "variableDependiente",
-            texto: "Sistema de Información 'Eficientis Balanced Scorecard'",
+            texto: "Proceso de Toma de Decisiones",
             color: color.variableDependiente,
             indicador: [
                 {
-                    texto: "Grado de Inteligencia",
-                    color: color.variableDependiente,
-                    valor: "[0 - 100]",
-                    unidad: "%",
-                    tecnica: "Encuesta",
-                    instrumento: "Cuestionario"
-                },
-                {
-                    texto: "Toma de Decisiones",
+                    texto: "Eficacia de las decisiones tomadas",
                     color: color.variableDependiente,
                     valor: "[0 - 100]",
                     unidad: "%",
@@ -66,7 +50,7 @@ const parametro = {
     limitacion: {
         geografica: {
             id: "limitacionGeografica",
-            texto: "Compañía 'Instrategy Management Consulting'",
+            texto: "Caja Municipal de Ahorro y Crédito de Maynas SA",
             color: color.limitacionGeografica
         },
         temporal: {

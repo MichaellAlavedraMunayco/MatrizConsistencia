@@ -87,9 +87,9 @@ function construirTabla(parametro, matriz, reglamento) {
             <thead>
                 <tr><th id="MetodologiaTooltip" colspan="3" class="text-center">Metodología</th></tr>
                 <tr>
-                    <th class="text-center" style="border-left: none; border-right: none;">Material</th>
-                    <th class="text-center" style="border-left: none; border-right: none;">Método</th>
-                    <th class="text-center" style="border-left: none; border-right: none;">Procedimientos</th>
+                    <th class="text-center" style="border-left: none; border-right: none; width: 33.3%">Material</th>
+                    <th class="text-center" style="border-left: none; border-right: none; width: 33.3%">Tipo de investigación</th>
+                    <th class="text-center" style="border-left: none; border-right: none; width: 33.3%">Procedimientos</th>
                 </tr>
             </thead>
             <tbody>
@@ -97,63 +97,77 @@ function construirTabla(parametro, matriz, reglamento) {
                    <td>
                         <b>Población</b>
                         <hr style="margin:0">
-                        Usuarios del ${convertirTextoAHTML([vd])}
+                        Eventos de toma de decisiones
+
                         <br><br><b>Delimitación geográfica</b>
                         <hr style="margin:0">
-                        Empresas clientes de la ${convertirTextoAHTML([parametro.limitacion.geografica])}
+                        ${convertirTextoAHTML([parametro.limitacion.geografica])}. Es una institución perteneciente al sistema financiero nacional con liderazgo en el sector de las microfinanzas en la Amazonía Peruana, y con alcance a otras zonas geográficas del país, integrante del Sistema de Cajas Municipales de Ahorro y Crédito del Perú (CMAC), cuyo objetivo principal es fomentar el microahorro de las familias, para intermediar los fondos captados a través del otorgamiento de préstamos, con prioridad, a los pequeños y microempresarios de la región donde desarrolla sus actividades activas y pasivas.
+
                         <br><br><b>Delimitación temporal</b>
                         <hr style="margin:0">
-                        Durante el ${convertirTextoAHTML([parametro.limitacion.temporal])}
+                        ${convertirTextoAHTML([parametro.limitacion.temporal])}
+
                         <br><br><b>Muestra</b>
                         <hr style="margin:0">
-                        Usuarios seleccionados del ${convertirTextoAHTML([vd])}
+                        <b><i>No probabilístico - Consecutivo</i></b>. Se incluirán a todos los eventos de toma de decisiones disponibles para un mejor estudio.
                     </td>
                     <td>
-                        <b>Tipo de investigación según el objetivo</b>
+                        <b>Según el objetivo</b>
                         <hr style="margin:0">
-                        Investigación científica aplicada
+                        <b><i>Científica aplicada</i></b>. Centrada en encontrar mecanismos o estrategias que permitan lograr un objetivo concreto
 
-                        <br><br><b>Tipo de investigación según los datos empleados</b>
+                        <br><br><b>Según el nivel de profundización del objeto de estudio</b>
                         <hr style="margin:0">
-                        Cuantitativa
+                        <b><i>Exploratoria</i></b>. Se investigará sobre aspectos que aún no han sido analizados con profundidad 
+                        <br><b><i>Explicativa</i></b>. Se determinarán las causas y consecuencias de los eventos estudiados
+                        
+                        <br><br><b>Según el tipo de datos empleados</b>
+                        <hr style="margin:0">
+                        <b><i>Cuantitativa</b></i>. Se estudiarán y analizarán los eventos a través de diferentes procedimientos basados en la medición
 
-                        <br><br><b>Tipo de investigación según el conocimiento que se tiene del objeto de estudio</b>
+                        <br><br><b>Según el grado de manipulación de variables</b>
                         <hr style="margin:0">
-                        Explicativa - Descriptiva - Exploratoria
-
-                        <br><br><b>Tipo de investigación según el grado de manipulación de variables</b>
-                        <hr style="margin:0">
-                        No Experimental
-                        <div style="width: 100%; text-align: center">VI <i class="fas fa-exchange-alt"></i> EF</div>
-                        VI = Aplicación/Mejora del ${convertirTextoAHTML([vi])}
+                        <b><i>No Experimental</b></i>. Se basará en la observación de eventos no controlados
+                        <div style="width: 100%; text-align: center"> EA <i class="fas fa-long-arrow-alt-right"></i> VI <i class="fas fa-long-arrow-alt-right"></i> EF</div>
+                        EA = Evaluación del ${convertirTextoAHTML([vd])}
+                        <br>VI = Aplicación del ${convertirTextoAHTML([vi])}
                         <br>FS = Evaluación del ${convertirTextoAHTML([vd])}
-
-                        <br><br><b>Tipo de investigación según el estudio de la realidad</b>
+                        
+                        <br><br><b>Según el estudio de inferencia</b>
                         <hr style="margin:0">
-                        Deductivo
+                        <b><i>Método hipotético-deductivo</i></b>. Se generarán hipótesis a partir de hechos observados, que a su vez, generarán teorías que deberán ser comprobadas mediante la experimentación
 
-                        <br><br><b>Tipo de investigación según el estudio de la realidad</b>
+                        <br><br><b>periodo temporal en que se realiza</b>
                         <hr style="margin:0">
-                        Longitudinal
+                        <b><i>Longitudinal</i></b>. Se realizará un seguimiento a unos mismos eventos a lo largo de un período concreto
                     </td>
                     <td>
-                        1. Desarrollo del modelo
-                        <br>1.1. Recolección de datos
-                        <br>1.2. Modelado de datos estructurados
-                        <br>1.3. Transformación de datos
-                        <br>1.4. Preparación de datos
-                        <br>1.5. Exploración visual de datos
-                        <br>1.6. Desarrollo/Mejora del modelo
-                        <br>1.7. Aplicación del modelo
-                        <br>1.8. Testeo del modelo
-                        <br>1.9. Documentación de resultados
-                        <br>1.10. (SI resultado es NEGATIVO) Volver al punto 1
-                        <br>1.11. Despliegue del modelo
-                        <br>2. Validación del modelo
-                        <br>2.1. Testeo por usuarios finales
-                        <br>2.2. Aplicación de cuestionarios
-                        <br>2.3. Recopilar resultados
-                        <br>2.4. Validación de hipótesis
+                        <b>1. Construcción de instrumentos de evaluación</b>
+                        <br><b>2. Evaluación del estado (actual)</b>
+                        <br>&nbsp;&nbsp;2.1. Aplicación de los instrumentos 
+                        <br>&nbsp;&nbsp;2.2. Recopilación de resultados 
+                        <br>&nbsp;&nbsp;2.3. Procesamiento de resultados 
+                        <br><b>3. Aplicación del modelo</b>
+                        <br>&nbsp;&nbsp;3.1. Recolección de datos
+                        <br>&nbsp;&nbsp;3.2. Modelado de datos
+                        <br>&nbsp;&nbsp;3.3. Transformación de datos
+                        <br>&nbsp;&nbsp;3.4. Preparación de datos
+                        <br>&nbsp;&nbsp;3.5. Exploración visual de datos
+                        <br>&nbsp;&nbsp;3.6. Desarrollo del modelo
+                        <br>&nbsp;&nbsp;3.7. Aplicación del modelo
+                        <br>&nbsp;&nbsp;3.8. Testeo del modelo
+                        <br>&nbsp;&nbsp;3.9. Documentación de resultados
+                        <br>&nbsp;&nbsp;3.10. (SI resultado es NEGATIVO) Volver al punto 1
+                        <br>&nbsp;&nbsp;3.11. Despliegue del modelo
+                        <br>&nbsp;&nbsp;3.12. Testeo por usuarios finales
+                        <br><b>4. Evaluación del estado (futuro)</b>
+                        <br>&nbsp;&nbsp;4.2. Aplicación de los instrumentos
+                        <br>&nbsp;&nbsp;4.2. Recopilación de resultados 
+                        <br>&nbsp;&nbsp;4.3. Procesamiento de resultados 
+                        <br><b>5. Validación de hipótesis</b>
+                        <br>&nbsp;&nbsp;5.1. Recopilación de resultados
+                        <br>&nbsp;&nbsp;5.2. Contrastación de resultados
+                        <br>&nbsp;&nbsp;5.2. Documentación de resultados
                     </td>
                 </tr>
             </tbody>
