@@ -8,6 +8,9 @@
     #btnPrint {
         display: none;
     }
+    #table2 {
+        margin-top: 300px
+    }
 }
 
 html, body {

@@ -1,28 +1,43 @@
 $(function () {
-    $("#matrizConsistencia").html(construirTabla(parametro, matriz, reglamento));
+  $("#matrizConsistencia").html(construirTabla(parametro, matriz, reglamento));
 
-    $('body').on('focus', '[contenteditable]', function () {
-        // objeto seleccionado
-        console.log($(this));
-    }).on('paste input', '[contenteditable]', function () {
-        // objeto en edicion
-        // vd.texto = $(this).text();
-        console.log($(this).find("#" + vi.id).text());
-        console.log($(this).find("#" + vd.id).text());
-
-    }).focusout(function () {
-        $("#matrizConsistencia").html(construirTabla(parametro, matriz, reglamento));
+  $("body")
+    .on("focus", "[contenteditable]", function () {
+      // objeto seleccionado
+      console.log($(this));
+    })
+    .on("paste input", "[contenteditable]", function () {
+      // objeto en edicion
+      // vd.texto = $(this).text();
+      console.log(
+        $(this)
+          .find("#" + vi.id)
+          .text()
+      );
+      console.log(
+        $(this)
+          .find("#" + vd.id)
+          .text()
+      );
+    })
+    .focusout(function () {
+      $("#matrizConsistencia").html(
+        construirTabla(parametro, matriz, reglamento)
+      );
     });
 });
 
 function construirTabla(parametro, matriz, reglamento) {
-    var tableHTML = new String('');
-    var numIndicadoresIndependientes = vi.indicador.length;
-    var numIndicadoresDependientes = vd.indicador.length;
+  var tableHTML = new String("");
+  var numIndicadoresIndependientes = vi.indicador.length;
+  var numIndicadoresDependientes = vd.indicador.length;
 
-    tableHTML +=
-        `<h5 class="text-center" style="color: #000" contenteditable="true" spellcheck="true">${convertirTextoAHTML(matriz.titulo.texto)}
-        <span class="text-center small" style="color: #666"> (${obtenerNumeroPalabras(convertirTextoAString(matriz.titulo.texto))})</span></h5>
+  tableHTML += `<h5 class="text-center" style="color: #000" contenteditable="true" spellcheck="true">${convertirTextoAHTML(
+    matriz.titulo.texto
+  )}
+        <span class="text-center small" style="color: #666"> (${obtenerNumeroPalabras(
+          convertirTextoAString(matriz.titulo.texto)
+        )})</span></h5>
         <table class="table table-sm my-table-hover table-bordered">
             <thead>
                 <tr>
@@ -41,49 +56,67 @@ function construirTabla(parametro, matriz, reglamento) {
             <tbody>
                 <tr>
                     <th rowspan="${numIndicadoresIndependientes}" class="rotate"><div class="verticalText">General</div></th>
-                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.problema.general)}</td>
-                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.objetivo.general)}</td>
-                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(matriz.hipotesis.general)}</td>
-                    <td rowspan="${numIndicadoresIndependientes}">Independiente<hr>${convertirTextoAHTML([vi])}</td>`;
-    for (let index = 0; index < numIndicadoresIndependientes; index++) {
-        const indicador = vi.indicador[index];
-        if (index > 0) {
-            tableHTML += `<tr>`;
-        }
-        tableHTML += `<td class="align-middle">${convertirTextoAHTML([indicador])}</td>`;
-        tableHTML += `<td class="align-middle">${indicador.valor}</td>`;
-        tableHTML += `<td class="align-middle">${indicador.unidad}</td>`;
-        tableHTML += `<td class="align-middle">${indicador.tecnica}</td>`;
-        tableHTML += `<td class="align-middle">${indicador.instrumento}</td>`;
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(
+    matriz.problema.general
+  )}</td>
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(
+    matriz.objetivo.general
+  )}</td>
+                    <td class="align-middle" rowspan="${numIndicadoresIndependientes}">${convertirTextoAHTML(
+    matriz.hipotesis.general
+  )}</td>
+                    <td rowspan="${numIndicadoresIndependientes}">Independiente<hr>${convertirTextoAHTML(
+    [vi]
+  )}</td>`;
+  for (let index = 0; index < numIndicadoresIndependientes; index++) {
+    const indicador = vi.indicador[index];
+    if (index > 0) {
+      tableHTML += `<tr>`;
     }
-    tableHTML += `</tr>
+    tableHTML += `<td class="align-middle">${convertirTextoAHTML([
+      indicador,
+    ])}</td>`;
+    tableHTML += `<td class="align-middle">${indicador.valor}</td>`;
+    tableHTML += `<td class="align-middle">${indicador.unidad}</td>`;
+    tableHTML += `<td class="align-middle">${indicador.tecnica}</td>`;
+    tableHTML += `<td class="align-middle">${indicador.instrumento}</td>`;
+  }
+  tableHTML += `</tr>
     <tr style="height: 10px"></tr>
     <tr>
         <th rowspan="${numIndicadoresDependientes}" class="rotate divider"><div class="verticalText">Específicos</div></th>`;
-    for (let index = 0; index < numIndicadoresDependientes; index++) {
-        const indicador = vd.indicador[index];
-        const problemaEspecifico = matriz.problema.especifico[index];
-        const objetivoEspecifico = matriz.objetivo.especifico[index];
-        const hipotesisEspecifico = matriz.hipotesis.especifico[index];
-        if (index > 0) {
-            tableHTML += `<tr>`;
-        }
-        tableHTML += `<td class="align-middle">${convertirTextoAHTML(problemaEspecifico)}</td>
-                    <td class="align-middle">${convertirTextoAHTML(objetivoEspecifico)}</td>
-                    <td class="align-middle">${convertirTextoAHTML(hipotesisEspecifico)}</td>`;
-        if (index == 0) {
-            tableHTML += `<td rowspan="${numIndicadoresDependientes}">Dependiente<hr>${convertirTextoAHTML([vd])}</td>`;
-        }
-        tableHTML += `
+  for (let index = 0; index < numIndicadoresDependientes; index++) {
+    const indicador = vd.indicador[index];
+    const problemaEspecifico = matriz.problema.especifico[index];
+    const objetivoEspecifico = matriz.objetivo.especifico[index];
+    const hipotesisEspecifico = matriz.hipotesis.especifico[index];
+    if (index > 0) {
+      tableHTML += `<tr>`;
+    }
+    tableHTML += `<td class="align-middle">${convertirTextoAHTML(
+      problemaEspecifico
+    )}</td>
+                    <td class="align-middle">${convertirTextoAHTML(
+                      objetivoEspecifico
+                    )}</td>
+                    <td class="align-middle">${convertirTextoAHTML(
+                      hipotesisEspecifico
+                    )}</td>`;
+    if (index == 0) {
+      tableHTML += `<td rowspan="${numIndicadoresDependientes}">Dependiente<hr>${convertirTextoAHTML(
+        [vd]
+      )}</td>`;
+    }
+    tableHTML += `
             <td class="align-middle">${convertirTextoAHTML([indicador])}</td>
             <td class="align-middle">${indicador.valor}</td>
             <td class="align-middle">${indicador.unidad}</td>
             <td class="align-middle">${indicador.tecnica}</td>
             <td class="align-middle">${indicador.instrumento}</td>
         </tr>`;
-    }
-    tableHTML += `</tbody></table>
-        <table class="table table-sm my-table-hover table-bordered">
+  }
+  tableHTML += `</tbody></table>
+        <table id="table2" class="table table-sm my-table-hover table-bordered">
             <thead>
                 <tr><th id="MetodologiaTooltip" colspan="3" class="text-center">Metodología</th></tr>
                 <tr>
@@ -97,11 +130,13 @@ function construirTabla(parametro, matriz, reglamento) {
                    <td>
                         <b>Población</b>
                         <hr style="margin:0">
-                        Eventos de toma de decisiones
+                        Procesos realizados de toma de decisiones
 
                         <br><br><b>Delimitación geográfica</b>
                         <hr style="margin:0">
-                        ${convertirTextoAHTML([parametro.limitacion.geografica])}. Es una institución perteneciente al sistema financiero nacional con liderazgo en el sector de las microfinanzas en la Amazonía Peruana, y con alcance a otras zonas geográficas del país, integrante del Sistema de Cajas Municipales de Ahorro y Crédito del Perú (CMAC), cuyo objetivo principal es fomentar el microahorro de las familias, para intermediar los fondos captados a través del otorgamiento de préstamos, con prioridad, a los pequeños y microempresarios de la región donde desarrolla sus actividades activas y pasivas.
+                        ${convertirTextoAHTML([
+                          parametro.limitacion.geografica,
+                        ])}. Es una institución perteneciente al sistema financiero nacional con liderazgo en el sector de las microfinanzas en la Amazonía Peruana, y con alcance a otras zonas geográficas del país, integrante del Sistema de Cajas Municipales de Ahorro y Crédito del Perú (CMAC), cuyo objetivo principal es fomentar el microahorro de las familias, para intermediar los fondos captados a través del otorgamiento de préstamos, con prioridad, a los pequeños y microempresarios de la región donde desarrolla sus actividades activas y pasivas.
 
                         <br><br><b>Delimitación temporal</b>
                         <hr style="margin:0">
@@ -109,58 +144,53 @@ function construirTabla(parametro, matriz, reglamento) {
 
                         <br><br><b>Muestra</b>
                         <hr style="margin:0">
-                        <b><i>No probabilístico - Consecutivo</i></b>. Se incluirán a todos los eventos de toma de decisiones disponibles para un mejor estudio.
+                        <b><i>No probabilístico</i></b>. Se usarán como objeto de investigación aquellos procesos de toma de decisión que más convengan para un mejor análisis.<br>
+                        <b><i>Consecutivo</i></b>. Se irán evaluando los procesos de toma de decisión cuando se hayan ejecutado a través del tiempo. 
                     </td>
                     <td>
-                        <b>Según el objetivo</b>
+                        <b>Según el objetivo de investigación</b>
                         <hr style="margin:0">
                         <b><i>Científica aplicada</i></b>. Centrada en encontrar mecanismos o estrategias que permitan lograr un objetivo concreto
 
                         <br><br><b>Según el nivel de profundización del objeto de estudio</b>
                         <hr style="margin:0">
-                        <b><i>Exploratoria</i></b>. Se investigará sobre aspectos que aún no han sido analizados con profundidad 
-                        <br><b><i>Explicativa</i></b>. Se determinarán las causas y consecuencias de los eventos estudiados
                         
                         <br><br><b>Según el tipo de datos empleados</b>
                         <hr style="margin:0">
-                        <b><i>Cuantitativa</b></i>. Se estudiarán y analizarán los eventos a través de diferentes procedimientos basados en la medición
+                        <b><i>Cuantitativa</b></i>. Se estudiarán y analizarán procesos a través procedimientos basados en la medición.
 
                         <br><br><b>Según el grado de manipulación de variables</b>
                         <hr style="margin:0">
-                        <b><i>No Experimental</b></i>. Se basará en la observación de eventos no controlados
+                        <b><i>Cuasi-Experimental</b></i>. Se basará en la observación de procesos seleccionas no aleatoriamente
                         <div style="width: 100%; text-align: center"> EA <i class="fas fa-long-arrow-alt-right"></i> VI <i class="fas fa-long-arrow-alt-right"></i> EF</div>
-                        EA = Evaluación del ${convertirTextoAHTML([vd])}
+                        EA = Evaluación del ${convertirTextoAHTML([
+                          vd,
+                        ])} sin modelo aplicado
                         <br>VI = Aplicación del ${convertirTextoAHTML([vi])}
-                        <br>FS = Evaluación del ${convertirTextoAHTML([vd])}
+                        <br>FS = Evaluación del ${convertirTextoAHTML([
+                          vd,
+                        ])} con modelo aplicado
                         
                         <br><br><b>Según el estudio de inferencia</b>
                         <hr style="margin:0">
                         <b><i>Método hipotético-deductivo</i></b>. Se generarán hipótesis a partir de hechos observados, que a su vez, generarán teorías que deberán ser comprobadas mediante la experimentación
 
-                        <br><br><b>periodo temporal en que se realiza</b>
+                        <br><br><b>Según el período temporal en que se realiza</b>
                         <hr style="margin:0">
                         <b><i>Longitudinal</i></b>. Se realizará un seguimiento a unos mismos eventos a lo largo de un período concreto
                     </td>
                     <td>
-                        <b>1. Construcción de instrumentos de evaluación</b>
-                        <br><b>2. Evaluación del estado (actual)</b>
+                        <b>1. Elaboración de instrumentos de investigación</b>
+                        <br><b>2. Evaluación del proceso de toma de decisiones sin modelo aplicado</b>
                         <br>&nbsp;&nbsp;2.1. Aplicación de los instrumentos 
                         <br>&nbsp;&nbsp;2.2. Recopilación de resultados 
                         <br>&nbsp;&nbsp;2.3. Procesamiento de resultados 
                         <br><b>3. Aplicación del modelo</b>
-                        <br>&nbsp;&nbsp;3.1. Recolección de datos
-                        <br>&nbsp;&nbsp;3.2. Modelado de datos
-                        <br>&nbsp;&nbsp;3.3. Transformación de datos
-                        <br>&nbsp;&nbsp;3.4. Preparación de datos
-                        <br>&nbsp;&nbsp;3.5. Exploración visual de datos
-                        <br>&nbsp;&nbsp;3.6. Desarrollo del modelo
-                        <br>&nbsp;&nbsp;3.7. Aplicación del modelo
-                        <br>&nbsp;&nbsp;3.8. Testeo del modelo
-                        <br>&nbsp;&nbsp;3.9. Documentación de resultados
-                        <br>&nbsp;&nbsp;3.10. (SI resultado es NEGATIVO) Volver al punto 1
-                        <br>&nbsp;&nbsp;3.11. Despliegue del modelo
-                        <br>&nbsp;&nbsp;3.12. Testeo por usuarios finales
-                        <br><b>4. Evaluación del estado (futuro)</b>
+                        <br>&nbsp;&nbsp;3.1. Modelado de datos
+                        <br>&nbsp;&nbsp;3.2. Desarrollo del modelo
+                        <br>&nbsp;&nbsp;3.3. Testeo del modelo
+                        <br>&nbsp;&nbsp;3.4. Despliegue del modelo
+                        <br><b>4. Evaluación del proceso de toma de decisiones con modelo aplicado</b>
                         <br>&nbsp;&nbsp;4.2. Aplicación de los instrumentos
                         <br>&nbsp;&nbsp;4.2. Recopilación de resultados 
                         <br>&nbsp;&nbsp;4.3. Procesamiento de resultados 
@@ -194,37 +224,37 @@ function construirTabla(parametro, matriz, reglamento) {
                 interactive: true
             });
         </script>`;
-    return tableHTML;
+  return tableHTML;
 }
 
 function convertirTextoAHTML(arrayText) {
-    var htmlTransformado = new String();
-    arrayText.forEach(textOrObject => {
-        if (typeof textOrObject === "object") {
-            htmlTransformado += `<div id="${textOrObject.id}" style="color: ${textOrObject.color}; display: inline; font-weight: bold;">${textOrObject.texto}</div>`;
-        }
-        if (typeof textOrObject === "string") {
-            htmlTransformado += textOrObject;
-        }
-    });
-    return htmlTransformado;
+  var htmlTransformado = new String();
+  arrayText.forEach((textOrObject) => {
+    if (typeof textOrObject === "object") {
+      htmlTransformado += `<div id="${textOrObject.id}" style="color: ${textOrObject.color}; display: inline; font-weight: bold;">${textOrObject.texto}</div>`;
+    }
+    if (typeof textOrObject === "string") {
+      htmlTransformado += textOrObject;
+    }
+  });
+  return htmlTransformado;
 }
 
 function convertirTextoAString(arrayText) {
-    var textoTransformado = new String();
-    arrayText.forEach(textOrObject => {
-        if (typeof textOrObject === "object") {
-            textoTransformado += textOrObject.texto;
-        }
-        if (typeof textOrObject === "string") {
-            textoTransformado += textOrObject;
-        }
-    });
-    return textoTransformado;
+  var textoTransformado = new String();
+  arrayText.forEach((textOrObject) => {
+    if (typeof textOrObject === "object") {
+      textoTransformado += textOrObject.texto;
+    }
+    if (typeof textOrObject === "string") {
+      textoTransformado += textOrObject;
+    }
+  });
+  return textoTransformado;
 }
 
 function obtenerNumeroPalabras(text) {
-    return text.split(" ").length;
+  return text.split(" ").length;
 }
 
 /**
@@ -237,30 +267,27 @@ function obtenerNumeroPalabras(text) {
  * {{po=texto}}
  * Periodo
  * {{pe=texto}}
- * @param {Array} array 
+ * @param {Array} array
  */
-function codificar(array) {
-
-}
+function codificar(array) {}
 
 /**
  * Example
  * {vi=Variable Independiente} ayuda a {vd=Variable Dependiente} de los {po=Poblacion} en el {pe=Periodo}
- * @param {String} text 
+ * @param {String} text
  */
 function decodificar(text) {
-    var i = 0;
-    var textToArray = [];
-    var temporalString = new String();
-    while (i++ == text.length - 1) {
-        if (text[i] == '{') {
-            temporalString += text[i];
-        }
-        if (text[i] == '}') {
-            temporalString += text[i];
-            textToArray.push(temporalString);
-            temporalString = '';
-        }
+  var i = 0;
+  var textToArray = [];
+  var temporalString = new String();
+  while (i++ == text.length - 1) {
+    if (text[i] == "{") {
+      temporalString += text[i];
     }
+    if (text[i] == "}") {
+      temporalString += text[i];
+      textToArray.push(temporalString);
+      temporalString = "";
+    }
+  }
 }
-
