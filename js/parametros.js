@@ -2,47 +2,31 @@ const parametro = {
   variable: {
     independiente: {
       id: "variableIndependiente",
-      texto: "Modelo de Análisis Prescriptivo",
+      texto: "Agente de Toma de Decisiones",
       color: color.variableIndependiente,
       indicador: [
         {
-          texto: "Exactitud",
+          texto: "Utilidad del Servicio",
           color: color.variableIndependiente,
-          valor: "[0 - 100]",
-          unidad: "%",
-          tecnica: "Cálculo matemático",
-          instrumento: "Matriz de confusión",
-        },
-        {
-          texto: "Sensibilidad",
-          color: color.variableIndependiente,
-          valor: "[0 - 100]",
-          unidad: "%",
-          tecnica: "Cálculo matemático",
-          instrumento: "Matriz de confusión",
-        },
-        {
-          texto: "Precisión",
-          color: color.variableIndependiente,
-          valor: "[0 - 100]",
-          unidad: "%",
-          tecnica: "Cálculo matemático",
-          instrumento: "Matriz de confusión",
-        },
-      ],
-    },
-    dependiente: {
-      id: "variableDependiente",
-      texto: "Proceso de Toma de Decisiones",
-      color: color.variableDependiente,
-      indicador: [
-        {
-          texto: "Eficacia del proceso de toma de decisiones",
-          color: color.variableDependiente,
           valor: "[0 - 100]",
           unidad: "%",
           tecnica: "Encuesta",
           instrumento: "Cuestionario",
+        }
+      ],
+    },
+    dependiente: {
+      id: "variableDependiente",
+      texto: "Desempeño Organizacional",
+      color: color.variableDependiente,
+      indicador: [
+        {
+          texto: "Efectividad Organizacional",
+          color: color.variableDependiente,
+          valor: "[0 - 100]",
+          unidad: "%",
+          tecnica: "Observación",
+          instrumento: "Software",
         },
       ],
     },

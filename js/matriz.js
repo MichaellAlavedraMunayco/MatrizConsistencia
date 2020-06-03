@@ -6,7 +6,7 @@ const lt = p.limitacion.temporal;
 
 const matriz = {
   titulo: {
-    texto: [vi, " como soporte en el ", vd, " de la ", lg, " en el ", lt],
+    texto: ["Aplicación de un ", vi, " en la Gestión del ", vd, " de la ", lg, " en el ", lt],
   },
   problema: {
     general: [
@@ -18,7 +18,7 @@ const matriz = {
       lt,
       "?",
     ],
-    especifico: [["¿Cómo mejorar la ", vd.indicador[0], " en el ", vd, "?"]],
+    especifico: [["¿Cómo mejorar la ", vd.indicador[0], " de la ", lg, " en el ", lt, "?"]],
   },
   objetivo: {
     general: [
@@ -32,12 +32,12 @@ const matriz = {
       lt,
     ],
     especifico: [
-      ["Validar que el ", vi, " mejora la ", vd.indicador[0], " en el ", vd],
+      ["Validar que el ", vi, " mejora la ", vd.indicador[0], " de la ", lg, " en el ", lt,],
     ],
   },
   hipotesis: {
     general: ["El ", vi, " mejorará el ", vd, " de la ", lg, " en el ", lt],
-    especifico: [["El ", vi, " mejorará la ", vd.indicador[0], " en el ", vd]],
+    especifico: [["El ", vi, " mejorará la ", vd.indicador[0], " de la ", lg, " en el ", lt,]],
   },
 };
 

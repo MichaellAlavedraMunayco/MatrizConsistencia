@@ -130,7 +130,7 @@ function construirTabla(parametro, matriz, reglamento) {
                    <td>
                         <b>Población</b>
                         <hr style="margin:0">
-                        Procesos realizados de toma de decisiones
+                        Indicadores Claves de Desempeño
 
                         <br><br><b>Delimitación geográfica</b>
                         <hr style="margin:0">
@@ -144,56 +144,44 @@ function construirTabla(parametro, matriz, reglamento) {
 
                         <br><br><b>Muestra</b>
                         <hr style="margin:0">
-                        <b><i>No probabilístico</i></b>. Se usarán como objeto de investigación aquellos procesos de toma de decisión que más convengan para un mejor análisis.<br>
-                        <b><i>Consecutivo</i></b>. Se irán evaluando los procesos de toma de decisión cuando se hayan ejecutado a través del tiempo. 
+                        <b><i>No probabilístico</i></b>. Se usarán como objeto de estudio a todos los indicadores clave de desempeño propios de la organización.<br>
                     </td>
                     <td>
                         <b>Según el objetivo de investigación</b>
-                        <hr style="margin:0">
+                        <hr style="margin:0">                        
                         <b><i>Científica aplicada</i></b>. Centrada en encontrar mecanismos o estrategias que permitan lograr un objetivo concreto
-
-                        <br><br><b>Según el nivel de profundización del objeto de estudio</b>
-                        <hr style="margin:0">
                         
                         <br><br><b>Según el tipo de datos empleados</b>
                         <hr style="margin:0">
-                        <b><i>Cuantitativa</b></i>. Se estudiarán y analizarán procesos a través procedimientos basados en la medición.
+                        <b><i>Cuantitativa</b></i>. Se estudiarán y analizarán indicadores a través de procedimientos basados en la medición.
 
                         <br><br><b>Según el grado de manipulación de variables</b>
                         <hr style="margin:0">
-                        <b><i>Cuasi-Experimental</b></i>. Se basará en la observación de procesos seleccionas no aleatoriamente
+                        <b><i>Cuasi-Experimental</b></i>. Se basará en la observación de indicadores seleccionados sin aleatoriedad                        
                         <div style="width: 100%; text-align: center"> EA <i class="fas fa-long-arrow-alt-right"></i> VI <i class="fas fa-long-arrow-alt-right"></i> EF</div>
-                        EA = Evaluación del ${convertirTextoAHTML([
-                          vd,
-                        ])} sin modelo aplicado
+                        EA = Revisión del estado del ${convertirTextoAHTML([vd])} sin haber usado del servicio
                         <br>VI = Aplicación del ${convertirTextoAHTML([vi])}
-                        <br>FS = Evaluación del ${convertirTextoAHTML([
-                          vd,
-                        ])} con modelo aplicado
+                        <br>FS = Revisión del estado del ${convertirTextoAHTML([vd])} después del uso del servicio
                         
-                        <br><br><b>Según el estudio de inferencia</b>
-                        <hr style="margin:0">
-                        <b><i>Método hipotético-deductivo</i></b>. Se generarán hipótesis a partir de hechos observados, que a su vez, generarán teorías que deberán ser comprobadas mediante la experimentación
-
                         <br><br><b>Según el período temporal en que se realiza</b>
                         <hr style="margin:0">
-                        <b><i>Longitudinal</i></b>. Se realizará un seguimiento a unos mismos eventos a lo largo de un período concreto
+                        <b><i>Longitudinal</i></b>. Se realizará un seguimiento a unos mismos indicadores a lo largo de un período concreto
                     </td>
                     <td>
                         <b>1. Elaboración de instrumentos de investigación</b>
-                        <br><b>2. Evaluación del proceso de toma de decisiones sin modelo aplicado</b>
-                        <br>&nbsp;&nbsp;2.1. Aplicación de los instrumentos 
-                        <br>&nbsp;&nbsp;2.2. Recopilación de resultados 
-                        <br>&nbsp;&nbsp;2.3. Procesamiento de resultados 
-                        <br><b>3. Aplicación del modelo</b>
-                        <br>&nbsp;&nbsp;3.1. Modelado de datos
-                        <br>&nbsp;&nbsp;3.2. Desarrollo del modelo
-                        <br>&nbsp;&nbsp;3.3. Testeo del modelo
-                        <br>&nbsp;&nbsp;3.4. Despliegue del modelo
-                        <br><b>4. Evaluación del proceso de toma de decisiones con modelo aplicado</b>
-                        <br>&nbsp;&nbsp;4.2. Aplicación de los instrumentos
-                        <br>&nbsp;&nbsp;4.2. Recopilación de resultados 
-                        <br>&nbsp;&nbsp;4.3. Procesamiento de resultados 
+                        <br><b>2. Revisión del estado del ${convertirTextoAHTML([vd])} sin haber usado del servicio</b>
+                        <br>&nbsp;&nbsp;2.1. Recopilación de resultados de indicadores 
+                        <br>&nbsp;&nbsp;2.2. Procesamiento de resultados 
+                        <br>&nbsp;&nbsp;2.3. Documentación de resultados 
+                        <br><b>3. Aplicación del ${convertirTextoAHTML([vi])}</b>
+                        <br>&nbsp;&nbsp;3.1. Análisis y diseño del agente
+                        <br>&nbsp;&nbsp;3.2. Desarrollo del agente
+                        <br>&nbsp;&nbsp;3.3. Prueba del agente
+                        <br>&nbsp;&nbsp;3.4. Despliegue del agente
+                        <br><b>4. Revisión del estado del ${convertirTextoAHTML([vd])} después del uso del servicio</b>
+                        <br>&nbsp;&nbsp;4.1. Recopilación de resultados de indicadores 
+                        <br>&nbsp;&nbsp;4.2. Procesamiento de resultados 
+                        <br>&nbsp;&nbsp;4.3. Documentación de resultados 
                         <br><b>5. Validación de hipótesis</b>
                         <br>&nbsp;&nbsp;5.1. Recopilación de resultados
                         <br>&nbsp;&nbsp;5.2. Contrastación de resultados
